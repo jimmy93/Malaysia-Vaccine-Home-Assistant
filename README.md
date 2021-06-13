@@ -35,9 +35,13 @@ In our data:
 * The total number of people vaccinated (`vaksin_vaccinated`) will be equal to 3 (Ali, Abu, Ahmad);
 * The total number of people fully vaccinated (`vaksin_fully_vaccinated`) will be equal to 1 (Ali).
 
-# Vaccination By States
+## Advance option
+
+### Vaccination By States
 Check out vaccination by states in [json](https://github.com/akutaktau/covid-19-data/blob/main/covid-19-states-vaccination-cumulatif-.json) format.
 
+### Graph
+For graphing you can get all row from this [code](covid_vaccine_malaysia_all.py)
 
 ###### FB: A Jimm Al
 ###### my fav local community
