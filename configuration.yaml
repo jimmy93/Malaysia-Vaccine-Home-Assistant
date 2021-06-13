@@ -1,0 +1,25 @@
+sensor:
+  - platform: command_line
+    name: Vaksin Malaysia
+    scan_interval: 7200 # Update every two hours. can change based on ur own preference
+    value_template: '{{ value_json.date }}'
+    command: "python covid_vaccine_malaysia.py" #running the python script
+    json_attributes:
+      - location
+      - date
+      - vaccine
+      - source_url
+      - total_vaccinations
+      - people_vaccinated
+      - people_fully_vaccinated
+  - platform: template
+    sensors:
+        vaksin_total:
+            friendly_name: 'Jumlah Vaksinasi'
+            value_template: '{{states.sensor.vaksin_malaysia.attributes["total_vaccinations"]}}'
+        vaksin_vaccinated:
+            friendly_name: 'Dos Pertama Vaksin'
+            value_template: '{{states.sensor.vaksin_malaysia.attributes["people_vaccinated"]}}'
+        vaksin_fully_vaccinated:
+            friendly_name: 'Dos Kedua Vaksin'
+            value_template: '{{states.sensor.vaksin_malaysia.attributes["people_fully_vaccinated"]}}'
