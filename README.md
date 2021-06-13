@@ -17,6 +17,10 @@ This is the basic csv data implementation to Home Assistant via pull the data fr
 2.  `vaksin_vaccinated` : total number of people who received at least one vaccine dose. If a person receives the first dose of a 2-dose vaccine, this metric goes up by 1. If they receive the second dose, the metric stays the same.
 3.  `vaksin_fully_vaccinated` : total number of people who received all doses prescribed by the vaccination protocol. If a person receives the first dose of a 2-dose vaccine, this metric stays the same. If they receive the second dose, the metric goes up by 1.
 
+## Example Entities Card in Home Assistant
+
+![vaksin_ha](/vaksin_ha.png)
+
 ## An example of how we calculate our metrics
 4 people take part in a vaccination program, to be given a vaccine that requires 2 doses to be effective against the disease.
 
